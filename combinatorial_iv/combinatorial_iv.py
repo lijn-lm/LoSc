@@ -59,7 +59,7 @@ def simulation_for_single_k_p_LOD(k, n, p, LOD_list, simu_num):
         current_mix_num = np.zeros(n, dtype=int)
 
         for m_current in range(1, n + 1):
-            idx = m_current - 1  # 当前行索引
+            idx = m_current - 1  
 
             current_y_processed = y_processed_all[idx, :]
 
@@ -71,7 +71,7 @@ def simulation_for_single_k_p_LOD(k, n, p, LOD_list, simu_num):
 
                 final_status_all_lod[needs_update] = np.logical_and(
                     final_status_all_lod[needs_update],  
-                    (new_row == 0),  # new_row中0元素对应该样本未参与混合
+                    (new_row == 0),  
                 )  
 
             if m_current in m_values:
